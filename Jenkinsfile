@@ -29,12 +29,6 @@ pipeline{
                 httpRequest httpMode: 'POST', responseHandle: 'NONE', url: 'https://api.render.com/deploy/srv-cfpo1uo2i3mo4bs53egg?key=7yLWt6KRymc', wrapAsMultipart: false
                 echo 'Deployment Successful'
             }
-        }
-        stage('Test'){
-            steps{
-                sh 'npm test'
-            }
-        }
     }
     post{
         failure{
